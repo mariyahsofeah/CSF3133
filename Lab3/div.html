@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body style="background-color:powderblue;"></body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Using div to Organize Content</title>
+    </head>
+    <body>
+        <div id="header">Header Section</div>
+        <div id="nav">Navigation Bar</div>
+        <div id="content">Main Content Area</div>
+        <div id="sidebar">Sidebar Content</div>
+        <div id="footer">Footer Section</div>
+        <h1>HTML5 Canvas</h1>
+            <canvas id="myCanvas" width="200" height="200" style="border:1px solid"></canvas>
+            <script>
+            const c = document.getElementById("myCanvas");
+            const ctx = c.getContext("2d");
+            ctx.fillStyle = "#92B901";
+            ctx.fillRect(50, 50, 100, 100);
+            </script>
+    </body>
+</html>
