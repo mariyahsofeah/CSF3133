@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Date and Time</title>
+    </head>
+    <body>
+        <button type="button" onclick="showDateTime()">Click me to display Date and Time</button>
+        <p id="demo"></p>
+
+        <script>
+            function showDateTime() {
+                document.getElementById('demo').innerText = Date();
+                document.getElementById('demo').style.color = "red";
+                document.getElementById('demo').style.backgroundColor = "yellow";
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quiz Application</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Web-Based User Interface Design Quiz</h1>
+        </header>
+
+        <main>
+            <section id="quiz-container">
+                <div id="timer">Time Left: <span id="time">30</span>s</div>
+                <div id="question"></div>
+                <ul id="options"></ul>
+                <div id="feedback"></div>
+                <button id="submitBtn">Submit Answer</button>
+                <button id="nextBtn" disabled>Next Question</button>
+            </section>
+        </main>
+
+        <footer>
+            <p id="score"></p>
+            <button id="startBtn">Start Quiz</button>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
