@@ -1,0 +1,344 @@
+/* --- Global Styles & Theme Setup --- */
+:root {
+    --primary-color: #384252; /* Dark Navy/Charcoal */
+    --secondary-color: #FFC0CB; /* Light Pink */
+    --accent-color: #A8E6CF; /* Mint/Light Green */
+    --bg-light: #F8F8F8;
+    --text-dark: #333;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth; /* For side navigation */
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: #FFFFFF; /* Clean white background */
+}
+
+main section {
+    padding: 80px 5%;
+    min-height: 100vh;
+}
+
+h1, h2, h3 {
+    margin-bottom: 0.8em;
+    color: var(--primary-color);
+    font-family: var(--font-heading);
+}
+
+/* --- 3. Side Navigation --- */
+.side-nav a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 0.9em;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: var(--font-heading); /* Optional: make nav links elegant too */
+    font-weight: 600;
+}
+
+.side-nav ul {
+    list-style: none;
+}
+
+.side-nav {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 120px;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px 0;
+    border-radius: 5px 0 0 5px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.side-nav a:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* --- 1. Transparent Image Text & Hero Section --- */
+.hero-section {
+    position: relative;
+    background: url('https://whimsigirl.com/cdn/shop/files/homebody_drop_33-11_1.jpg?v=1763546850&width=1080') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+
+.hero-overlay {
+    background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white background */
+    color: var(--primary-color);
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 500px;
+}
+
+.hero-overlay h1 {
+    font-size: 3em;
+}
+
+/* --- 2. Form on Image --- */
+.login-container {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background for contrast */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 300px;
+}
+
+.login-form h3 {
+    color: white;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+    background-color: #FF8F9C;
+}
+
+/* --- 4. Automatic Slideshow --- */
+.slideshow-container {
+    position: relative;
+    background-color: var(--bg-light);
+    text-align: center;
+}
+
+.slides {
+    max-width: 700px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    height: 500px; /* Fixed height for image area */
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none; /* Controlled by JavaScript */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Slideshow Controls */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* --- 7. Collapsible Section --- */
+.collapsible-section-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.collapsible-btn {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.1em;
+    transition: 0.4s;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.collapsible-btn:hover, .active {
+    background-color: #90D0B6;
+}
+
+.collapsible-content {
+    padding: 0 18px;
+    max-height: 0; /* Important for the collapse effect */
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: var(--bg-light);
+    border-radius: 0 0 5px 5px;
+}
+
+.collapsible-content p {
+    padding: 15px 0;
+}
+
+
+/* --- 6. Progress Bar --- */
+#loading-bar {
+    text-align: center;
+    background-color: #EEE;
+    min-height: initial; /* Override main section min-height for this small section */
+    padding: 40px 5%;
+}
+
+.progress-bar-container {
+    width: 80%;
+    max-width: 600px;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    text-align: center;
+    padding: 5px;
+    color: white;
+    background-color: var(--primary-color);
+    width: 0; /* Initial width is 0, controlled by JS */
+    transition: width 0.5s ease;
+    border-radius: 5px 0 0 5px;
+    white-space: nowrap;
+}
+
+
+/* --- 5. Profile Card --- */
+.profile-card-section {
+    text-align: center;
+}
+
+.profile-card {
+    max-width: 350px;
+    margin: 30px auto;
+    padding: 20px;
+    background: var(--bg-light);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid var(--secondary-color);
+}
+
+.profile-title {
+    margin-bottom: 5px;
+}
+
+.profile-desc {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    color: var(--primary-color);
+    font-size: 1.5em;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--secondary-color);
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 768px) {
+    .side-nav {
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform: none;
+        width: 100%;
+        padding: 0;
+        border-radius: 0;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .side-nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .side-nav a {
+        padding: 10px 5px;
+        font-size: 0.75em;
+        text-align: center;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero-overlay, .login-container {
+        max-width: 90%;
+        margin: 10px 0;
+    }
+
+    .hero-overlay h1 {
+        font-size: 2em;
+    }
+
+    .prev, .next {
+        padding: 10px;
+        font-size: 14px;
+    }
+}

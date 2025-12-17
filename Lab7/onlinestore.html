@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whimsical Clothing Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="onlinestore.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="side-nav">
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#new-arrivals">New Arrivals</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#profile">Our Founder</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        
+        <section id="hero" class="hero-section">
+            <div class="hero-overlay">
+                <h1>The Art of Effortless Style</h1>
+                <p>Designed for comfort, crafted for you. New collection dropping soon!</p>
+            </div>
+            <div class="login-container">
+                <form class="login-form">
+                    <h3>Join Our Community</h3>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit">Sign Up / Log In</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="new-arrivals" class="slideshow-container">
+            <h2>New Arrivals</h2>
+            <div class="slides">
+                <img src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/475647/item/goods_53_475647_3x4.jpg?width=494" class="slide" alt="Mint Linen Shirt">
+                <img src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/476647/item/goods_01_476647_3x4.jpg?width=494" class="slide" alt="Stripes Shirt">
+                <img src="https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/477006/item/goods_01_477006_3x4.jpg?width=600" class="slide" alt="Linen Stripe Pant">
+            </div>
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+        </section>
+
+        <section id="faq" class="collapsible-section-container">
+            <h2>FAQs & Store Info</h2>
+            <button class="collapsible-btn">What are your shipping options?</button>
+            <div class="collapsible-content">
+                <p>We offer standard and express shipping worldwide. Details are available at checkout.</p>
+            </div>
+            <button class="collapsible-btn">What is your return policy?</button>
+            <div class="collapsible-content">
+                <p>Returns are accepted within 30 days of purchase, provided the items are unworn and have original tags.</p>
+            </div>
+        </section>
+        
+        <section id="loading-bar">
+            <h2>Store Content Loading Status</h2>
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill" id="page-load-progress">0%</div>
+            </div>
+            <p>Simulating initial content loading for demonstration.</p>
+        </section>
+
+        <section id="profile" class="profile-card-section">
+            <h2>Meet The Founder</h2>
+            <div class="profile-card">
+                <img src="founder.jpeg" alt="Profile Image" class="profile-img">
+                <h3 class="profile-title">Mariyah Sofeah</h3>
+                <p class="profile-desc">Designer and creator of Whimsical Wear, focusing on sustainable fabrics and timeless designs.</p>
+                <div class="social-icons">
+                    <a href="#https://www.facebook.com/mariyahsofeah.rizan"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#https://www.instagram.com/mariyahsofeah_/?hl=en"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <p>Email us at info@whimsical.com</p>
+        </section>
+
+    </main>
+
+    <script src="onlinestore.js"></script>
+</body>
+
+<footer>&copy Whimsical Wear. All right reserved.</footer>
+</html>
